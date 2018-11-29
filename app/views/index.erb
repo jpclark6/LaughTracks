@@ -13,34 +13,44 @@
           <li><a href="/comedians?sort=name">Sort by name</a></li>
           <li><a href="/comedians?sort=city">Sort by city</a></li>
           <li><a href="/comedians?sort=age">Sort by age</a></li>
+          <li><a>Find by age:
+            <form class="sort-by-age" action="/comedians" method=post>
+              <input class="text-box" type="text" name="age" placeholder="Enter age">
+              <input class="submit-button" type="submit" value="Submit">
+            </form>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
     <div id="content">
       <div id="statistics">
         <h3><b>Statistics:</b></h3>
-        <h4>Average age: <b><%= Comedian.average_age(@age).round(2) %></b></h4>
-        <h4>Average run length:&nbsp;
-          <b><%= Special.average_length(@age).round(2) %></b> min.</h4>
-        <h4>Cities:&nbsp;
+        <h4><b>Average age: </b><%= @comedians.average_age(@comedians).round(2) %></h4>
+        <h4><b>Average run length:</b>
+          <%= Special.average_length(@age).round(2) %> min.</h4>
+        <h4><b>Cities:</b>&nbsp;
           <% Comedian.cities(@age).each do |city| %>
-          <b><%= city %></b>&nbsp;
+          <%= city %>&nbsp;
           <% end %>
         </h4>
-        <h4>Total specials: <b><%= Special.tot_specials(@age) %></b></h4>
+        <h4><b>Total specials:</b> <%= Special.tot_specials(@age) %></h4>
       </div>
-
       <% @comedians.each do |comedian| %>
       <div class="comedian" id="<%= comedian.last_name %>-<%= comedian.first_name %>">
         <h2><a href="/comedians/<%= comedian.id %>"><%= comedian.first_name %> <%= comedian.last_name %></a></h2>
-        <h3>Home town: <%= comedian.city %></h3>
-        <h3>Age: <%= comedian.age %></h3>
-        <h3>Specials: <%= comedian.specials.count %>
+        <h3><b>Home town:</b> <%= comedian.city %></h3>
+        <h3><b>Age:</b> <%= comedian.age %></h3>
+        <h3><b>Specials:</b> <%= comedian.specials.count %>
+        <div class="all-specials">
           <% comedian.specials.each do |special| %>
-            <h4><%= special.title %></h4>
-            <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
-            <img src="<%= special.pic_url %>">
+            <div class="specials">
+              <h4><%= special.title %></h4>
+              <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
+              <img src="<%= special.pic_url %>" alt="<%= special.title %>">
+            </div>
           <% end %>
+        </div>
           <hr>
       </div>
       <% end %>

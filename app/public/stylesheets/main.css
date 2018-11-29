@@ -36,8 +36,27 @@ nav {
   font-size: 18px;
 }
 
+nav form {
+  display: inline;
+}
+
+nav form .text-box {
+  width: 30%;
+}
+
+nav form .submit-button {
+  border: none;
+  background-color: #333;
+  color: white;
+}
+/*
+.sort-by-age {
+  width: 6em;
+} */
+
 img {
-  max-height: 300px;
+  max-height: 100px;
+  max-width: 200px;
 }
 
 ul {
@@ -74,10 +93,53 @@ b {
 
 #statistics {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 0;
+  padding: 10px 0;
 }
 
 #statistics h4 {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.comedian {
+  padding: 10px 10px;
+}
+
+.comedian a {
+
+}
+
+.comedian a:link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.comedian a:visited {
+    text-decoration: none;
+    color: #444;
+}
+
+.comedian a:hover {
+    text-decoration: underline;
+    color: darkred;
+}
+
+.comedian h2 {
+  padding: 0 0 15px 0;
+}
+
+.comedian h3 {
+  padding: 5px 0 5px 45px;
+}
+
+.all-specials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.specials {
+  padding: 20px;
 }

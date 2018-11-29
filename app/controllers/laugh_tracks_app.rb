@@ -3,6 +3,7 @@ class LaughTracksApp < Sinatra::Base
 
   get '/comedians' do
     @comedians = Comedian.sort(params)
+    @age = params[:age]
     erb :index
   end
 
@@ -11,8 +12,12 @@ class LaughTracksApp < Sinatra::Base
   end
 
   post '/comedians' do
-    Comedian.create(params[:comedian])
-    redirect '/comedians'
+    if params[:comedian]
+      Comedian.create(params[:comedian])
+      redirect '/comedians'
+    else
+      redirect "/comedians?age=#{params[:age]}"
+    end
   end
 
   get '/comedians/:id' do

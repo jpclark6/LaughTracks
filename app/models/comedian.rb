@@ -1,12 +1,12 @@
 class Comedian < ActiveRecord::Base
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :age, presence: true
+
   has_many :specials
 
-  def self.average_age(age)
-    if age
-      return age.to_f
-    else
-      Comedian.average(:age)
-    end
+  def self.average_age(comedians)
+    comedians.average(:age)
   end
 
   def self.cities(age)

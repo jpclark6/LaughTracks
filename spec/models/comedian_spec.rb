@@ -7,7 +7,7 @@ RSpec.describe Comedian do
       end
 
       it 'should be invalid if missing an age' do
-        comic = Comedian.create(name: 'Mitch Hedberg')
+        comic = Comedian.create(first_name: 'Mitch', last_name: 'Headburg')
         expect(comic).to_not be_valid
       end
     end

@@ -1,4 +1,6 @@
 class Special < ActiveRecord::Base
+  validates :title, presence: true
+
   belongs_to :comedian
 
   def self.average_length(age)
