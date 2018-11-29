@@ -1,0 +1,14 @@
+<h1>Statistics</h1><% require 'pry'; binding.pry %>
+<h2>Average age: <%= Comedian.average_age.round(2) %>, average run length: <%= Special.average_length.round(2) %> min., cities: <% Comedian.cities.each do |c| %> <%= puts c %> <% end %></h2>
+
+<% @comedians.each do |comedian| %>
+<h2><%= comedian.first_name %> <%= comedian.last_name %></h2>
+<h3>Home town: <%= comedian.city %></h3>
+<h3>Age: <%= comedian.age %></h3>
+  <% comedian.specials.each do |special| %>
+    <h4><%= special.title %></h4>
+    <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
+    <img src="<%= special.pic_url %>">
+  <% end %>
+  <hr>
+<% end %>
