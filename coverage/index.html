@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-29T13:03:44-07:00">2018-11-29T13:03:44-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-29T13:29:21-07:00">2018-11-29T13:29:21-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">63.64%</span></span>
+    (<span class="covered_percent"><span class="red">68.24%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.69
+         0.74
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>77</b> relevant lines. 
-    <span class="green"><b>49</b> lines covered</span> and
-    <span class="red"><b>28</b> lines missed </span>
+    <b>85</b> relevant lines. 
+    <span class="green"><b>58</b> lines covered</span> and
+    <span class="red"><b>27</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#3fd7f41d704361b0409ca8d1b413ca758f96438e" class="src_link" title="app/models/comedian.rb">app/models/comedian.rb</a></td>
-        <td class="red strong">40.0 %</td>
+        <td class="red strong">45.0 %</td>
         <td>34</td>
         <td>20</td>
-        <td>8</td>
-        <td>12</td>
-        <td>0.4</td>
+        <td>9</td>
+        <td>11</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -103,9 +103,9 @@
       <tr>
         <td class="strong"><a href="#71c6fb3ae334b34dd6996fed64d56189a665469a" class="src_link" title="spec/models/comedian_spec.rb">spec/models/comedian_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>9</td>
-        <td>9</td>
+        <td>26</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -320,11 +320,11 @@
         <div class="source_table" id="3fd7f41d704361b0409ca8d1b413ca758f96438e">
   <div class="header">
     <h3>app/models/comedian.rb</h3>
-    <h4><span class="red">40.0 %</span> covered</h4>
+    <h4><span class="red">45.0 %</span> covered</h4>
     <div>
       <b>20</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -379,8 +379,8 @@
           <code class="ruby">  def self.average_age(comedians)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">    comedians.average(:age)</code>
         </li>
@@ -956,8 +956,8 @@
     <h3>spec/models/comedian_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1050,6 +1050,72 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;Class methods&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should find average age of comedians&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      Comedian.create(first_name: &quot;Fn&quot;, last_name: &quot;Ln&quot;, age: 10, city: &quot;Denver&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      Comedian.create(first_name: &quot;Fn2&quot;, last_name: &quot;Ln2&quot;, age: 20, city: &quot;Alb&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      comedians = Comedian.all</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expected = 15</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      actual = Comedian.average_age(comedians)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(actual).to eq(expected)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>

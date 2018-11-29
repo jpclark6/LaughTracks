@@ -88,7 +88,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -146,6 +146,17 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/jus/turing/2module/projects/LaughTracks/spec/models/special_spec.rb": [
@@ -161,6 +172,6 @@
         null
       ]
     },
-    "timestamp": 1543521824
+    "timestamp": 1543523361
   }
 }
