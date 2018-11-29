@@ -11,15 +11,15 @@ Special.create(title: "The Big Laff Off", length: (52 * 60), comedian_id: 1, pic
 Special.create(title: "Comic Relief VII", length: (4 * 60 * 60), comedian_id: 1, pic_url: "https://images-na.ssl-images-amazon.com/images/I/412MDX0X85L.jpg")
 
 Comedian.create(first_name: "John", last_name: "Mulaney", age: "36", city: "Chicago")
-Special.create(title: "The Comeback Kid", length: ((60 + 2) * 60), comedian_id: "2", pic_url: "https://m.media-amazon.com/images/M/MV5BMDQ3NjU0NmQtYjgyZS00MzIzLWJjNDEtMWY5YjczYjc0MTMyXkEyXkFqcGdeQXVyMjI0MjUyNTc@._V1_.jpg")
-Special.create(title: "New In Town", length: (60 * 60), comedian_id: "2", pic_url: "https://m.media-amazon.com/images/M/MV5BMjIzNzg5NTA2M15BMl5BanBnXkFtZTgwOTY4NjA2MDE@._V1_.jpg")
-Special.create(title: "Crashing", length: (30 * 60), comedian_id: "2", pic_url: "https://cdn.pastemagazine.com/www/articles/CrashingS2Main.jpg")
+Special.create(title: "The Comeback Kid", length: ((60 + 2) * 60), comedian_id: 2, pic_url: "https://m.media-amazon.com/images/M/MV5BMDQ3NjU0NmQtYjgyZS00MzIzLWJjNDEtMWY5YjczYjc0MTMyXkEyXkFqcGdeQXVyMjI0MjUyNTc@._V1_.jpg")
+Special.create(title: "New In Town", length: (60 * 60), comedian_id: 2, pic_url: "https://m.media-amazon.com/images/M/MV5BMjIzNzg5NTA2M15BMl5BanBnXkFtZTgwOTY4NjA2MDE@._V1_.jpg")
+Special.create(title: "Crashing", length: (30 * 60), comedian_id: 2, pic_url: "https://cdn.pastemagazine.com/www/articles/CrashingS2Main.jpg")
 
 Comedian.create(first_name: "Mike", last_name: "Birbiglia", age: "40", city: "Shrewsbury")
-Special.create(title: "Sleepwalk With Me", length: (81 * 60), comedian_id: "3", pic_url: "https://images-na.ssl-images-amazon.com/images/I/91vzyOcSXDL._SL1500_.jpg")
-Special.create(title: "Premium Blend", length: (30 * 60), comedian_id: "3", pic_url: "https://m.media-amazon.com/images/M/MV5BNjkzODM2MTcxN15BMl5BanBnXkFtZTgwNDQwNDgwMzE@._V1_.jpg")
-Special.create(title: "Mike Birbiglia's Secret Public Journal", length: (102 * 60), comedian_id: "3", pic_url: "https://images-na.ssl-images-amazon.com/images/I/61nyOHux09L.jpg")
-Special.create(title: "This American Life Live!", length: (90 * 60), comedian_id: "3", pic_url: "https://m.media-amazon.com/images/M/MV5BYTExMTFlOGEtZTExNi00YWYyLTg3YjEtYWVmOTgzMjlkZDA2XkEyXkFqcGdeQXVyNjc1NjY1Mg@@._V1_SY1000_CR0,0,601,1000_AL_.jpg")
+Special.create(title: "Sleepwalk With Me", length: (81 * 60), comedian_id: 3, pic_url: "https://images-na.ssl-images-amazon.com/images/I/91vzyOcSXDL._SL1500_.jpg")
+Special.create(title: "Premium Blend", length: (30 * 60), comedian_id: 3, pic_url: "https://m.media-amazon.com/images/M/MV5BNjkzODM2MTcxN15BMl5BanBnXkFtZTgwNDQwNDgwMzE@._V1_.jpg")
+Special.create(title: "Mike Birbiglia's Secret Public Journal", length: (102 * 60), comedian_id: 3, pic_url: "https://images-na.ssl-images-amazon.com/images/I/61nyOHux09L.jpg")
+Special.create(title: "This American Life Live!", length: (90 * 60), comedian_id: 3, pic_url: "https://m.media-amazon.com/images/M/MV5BYTExMTFlOGEtZTExNi00YWYyLTg3YjEtYWVmOTgzMjlkZDA2XkEyXkFqcGdeQXVyNjc1NjY1Mg@@._V1_SY1000_CR0,0,601,1000_AL_.jpg")
 
 # Comedian.create(first_name: "Steve", last_name: "Martin", age: "73", city: "4")
 # Special.create(title: "", length: "", comedian_id: "", pic_url: )
