@@ -2,13 +2,7 @@ class LaughTracksApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
 
   get '/comedians' do
-    @age = params[:age]
-    if params[:age]
-      @comedians = Comedian.where("age = #{params[:age]}")
-    else
-      @comedians = Comedian.all
-    end
-
+    @comedians = Comedian.sort(params)
     erb :index
   end
 
