@@ -14,7 +14,7 @@
           <li><a href="/comedians?sort=city">Sort by city</a></li>
           <li><a href="/comedians?sort=age">Sort by age</a></li>
           <li><a>Find by age:
-            <form class="sort-by-age" action="/comedians" method=post>
+            <form class="sort-by-age" action="/comedians" method=get>
               <input class="text-box" type="text" name="age" placeholder="Enter age">
               <input class="submit-button" type="submit" value="Submit">
             </form>
@@ -28,13 +28,13 @@
         <h3><b>Statistics:</b></h3>
         <h4><b>Average age: </b><%= @comedians.average_age(@comedians).round(2) %></h4>
         <h4><b>Average run length:</b>
-          <%= Special.average_length(@age).round(2) %> min.</h4>
+          <%= @ave_special_length.round(2) %> min.</h4>
         <h4><b>Cities:</b>&nbsp;
-          <% Comedian.cities(@age).each do |city| %>
+          <% @all_cities.each do |city| %>
           <%= city %>&nbsp;
           <% end %>
         </h4>
-        <h4><b>Total specials:</b> <%= Special.tot_specials(@age) %></h4>
+        <h4><b>Total specials:</b> <%= @all_specials %></h4>
       </div>
       <% @comedians.each do |comedian| %>
       <div class="comedian" id="<%= comedian.last_name %>-<%= comedian.first_name %>">
@@ -45,14 +45,14 @@
         <div class="all-specials">
           <% comedian.specials.each do |special| %>
             <div class="specials">
-              <h4><%= special.title %></h4>
+              <h4><b><%= special.title %></b></h4>
               <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
               <img src="<%= special.pic_url %>" alt="<%= special.title %>">
             </div>
           <% end %>
         </div>
-          <hr>
       </div>
+      <br><br>
       <% end %>
     </div>
   </body>
