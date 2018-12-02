@@ -19,9 +19,9 @@ class Comedian < ActiveRecord::Base
 
   def self.sort(params)
     if params[:age]
-      comedians = where("age = #{params[:age]}")
+      comedians = where("age = #{params[:age]}").order("last_name asc, first_name asc")
     elsif params[:sort]
-      comedians = Comedian.all.order("#{params[:sort]}")
+      comedians = Comedian.all.order("#{params[:sort]}, last_name asc, first_name asc")
       if params[:sort] == "name"
         comedians = Comedian.all.order("last_name asc, first_name asc")
       end

@@ -20,18 +20,17 @@ Special.create(title: "Sleepwalk With Me", length: (81 * 60), comedian_id: 3, pi
 Special.create(title: "Premium Blend", length: (30 * 60), comedian_id: 3, pic_url: "https://m.media-amazon.com/images/M/MV5BNjkzODM2MTcxN15BMl5BanBnXkFtZTgwNDQwNDgwMzE@._V1_.jpg")
 Special.create(title: "Mike Birbiglia's Secret Public Journal", length: (102 * 60), comedian_id: 3, pic_url: "https://images-na.ssl-images-amazon.com/images/I/61nyOHux09L.jpg")
 Special.create(title: "This American Life Live!", length: (90 * 60), comedian_id: 3, pic_url: "https://m.media-amazon.com/images/M/MV5BYTExMTFlOGEtZTExNi00YWYyLTg3YjEtYWVmOTgzMjlkZDA2XkEyXkFqcGdeQXVyNjc1NjY1Mg@@._V1_SY1000_CR0,0,601,1000_AL_.jpg")
+Special.create(title: "Don't Think Twice", length: (92 * 60), comedian_id: 3, pic_url: "https://m.media-amazon.com/images/M/MV5BMTkxMTkwODM2MF5BMl5BanBnXkFtZTgwNjYwNjY5ODE@._V1_.jpg")
 
 Comedian.create(first_name: "Sarah", last_name: "Silverman", age: "47", city: "Bedford")
 Special.create(title: "Dying Laughing", length: (89 * 60), comedian_id: 4, pic_url: "https://m.media-amazon.com/images/M/MV5BMjQyMTY0NzMwOF5BMl5BanBnXkFtZTgwNjUzNzg4MDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg")
 Special.create(title: "Supermarket", length: (12 * 60), comedian_id: 4, pic_url: "https://m.media-amazon.com/images/M/MV5BYTYyMTVhNzYtNjYwYS00YjcwLTk0MzMtNzc1MzA4MTBjMmQxXkEyXkFqcGdeQXVyMTI4NTcwNTA@._V1_.jpg")
 Special.create(title: "We Are Miracles", length: (54 * 60), comedian_id: 4, pic_url: "https://www.hbo.com/content/dam/hbodata/comedy/sarah-silverman-we-are-miracles/video-stills/conversations-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg")
 
-#
-# Comedian.create(first_name: "", last_name: "", age: "", city: "5")
-# Special.create(title: "", length: "", comedian_id: "")
-# Special.create(title: "", length: "", comedian_id: "")
-# Special.create(title: "", length: "", comedian_id: "")
-# Special.create(title: "", length: "", comedian_id: "")
+aziz = Comedian.create(first_name: "Aziz", last_name: "Ansari", age: "35", city: "Columbia")
+Special.create(title: "Looking For Work", length: (3 * 60), comedian_id: aziz.id, pic_url: "images/aziz_3.jpg")
+Special.create(title: "Buried Alive", length: (80 * 60), comedian_id: aziz.id, pic_url: "images/aziz_1.jpg")
+Special.create(title: "Dangerously Delicious", length: (61 * 60), comedian_id: aziz.id, pic_url: "images/aziz_2.jpg")
 #
 # Comedian.create(first_name: "", last_name: "", age: "", city: "6")
 # Special.create(title: "", length: "", comedian_id: "")

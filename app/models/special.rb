@@ -11,7 +11,7 @@ class Special < ActiveRecord::Base
         joins(:comedian).where("age = #{age}").average(:length) / 60
       end
     else
-      average(:length) / 60
+      average(:length) / 60 if average(:length)
     end
   end
 
