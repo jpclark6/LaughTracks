@@ -11,17 +11,17 @@ class Comedian < ActiveRecord::Base
 
   def self.cities(age)
     if age
-      Comedian.where("age = #{age}").distinct.pluck(:city)
+      where("age = #{age}").distinct.pluck(:city)
     else
-      Comedian.select(:city).distinct.pluck(:city)
+      select(:city).distinct.pluck(:city)
     end
   end
 
   def self.sort(params)
     if params[:age]
-      comedians = Comedian.where("age = #{params[:age]}")
+      comedians = where("age = #{params[:age]}").order("last_name asc, first_name asc")
     elsif params[:sort]
-      comedians = Comedian.all.order("#{params[:sort]}")
+      comedians = Comedian.all.order("#{params[:sort]}, last_name asc, first_name asc")
       if params[:sort] == "name"
         comedians = Comedian.all.order("last_name asc, first_name asc")
       end

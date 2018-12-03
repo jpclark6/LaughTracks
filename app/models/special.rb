@@ -5,17 +5,21 @@ class Special < ActiveRecord::Base
 
   def self.average_length(age)
     if age
-      Special.joins(:comedian).where("age = #{age}").average(:length) / 60
+      if joins(:comedian).where("age = #{age}").empty?
+        return 0
+      else
+        joins(:comedian).where("age = #{age}").average(:length) / 60
+      end
     else
-      Special.average(:length) / 60
+      average(:length) / 60 if average(:length)
     end
   end
 
   def self.tot_specials(age)
     if age
-      Special.joins(:comedian).where("age = #{age}").count
+      joins(:comedian).where("age = #{age}").count
     else
-      Special.all.count
+      count
     end
   end
 

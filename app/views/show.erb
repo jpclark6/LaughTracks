@@ -5,18 +5,19 @@
     <link rel="stylesheet" href="../stylesheets/main.css" title="css" type="text/css" />
   </head>
   <body>
-    <h1><%= @comedian.first_name %> <%= @comedian.last_name %></h1>
-    <h3>Home town: <%= @comedian.city %></h3>
-    <h3>Age: <%= @comedian.age %></h3>
-    <h3>Specials: <%= @comedian.specials.count %>
-    <% @comedian.specials.each do |special| %>
-      <h4><%= special.title %></h4>
-      <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
-      <img src="<%= special.pic_url %>">
-    <% end %>
-
-    <form action="/comedians">
-        <input type="submit" value="Back to Comedians" />
-    </form>
+    <div id="insight">
+      <h1><%= @comedian.first_name %> <%= @comedian.last_name %></h1>
+      <h3><b>Home town:</b> <%= @comedian.city %></h3>
+      <h3><b>Age:</b> <%= @comedian.age %></h3>
+      <h3><b>Specials:</b> <%= @comedian.specials.count %></h3>
+      <% @comedian.specials.each do |special| %>
+        <div class="individual-special">
+          <h4><b><%= special.title %></b></h4>
+          <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
+          <a href="<%= special.pic_url %>"><img src="<%= special.pic_url %>"></a>
+        </div>
+      <% end %>
+      <a href="/comedians">Back to all comedians</a>
+    <div>
   </body>
 </html>

@@ -1,11 +1,12 @@
 body {
-  background-color: lightgray;
-  width: 1000px;
+  background-color: #DED6D6;
+  width: 1070px;
   margin: 0 auto;
   font-family: "Tahoma", Geneva, sans-serif;
   border-style: solid;
   border-width: 4px;
-  border-color: #333;
+  border-color: #7E7579;
+  border-radius: 7px;
 }
 
 header {
@@ -14,7 +15,7 @@ header {
   color: #333;
 }
 
- h1 {
+h1 {
   font-size: 36px;
   padding: 12px;
   font-weight: bold;
@@ -55,8 +56,12 @@ nav form .submit-button {
 } */
 
 img {
-  max-height: 100px;
-  max-width: 200px;
+  clip: rect(100px, 200px);
+  height: 100px;
+  width: 150px;
+  border: solid;
+  border-color: lightslategrey;
+  border-width: 2px;
 }
 
 ul {
@@ -65,6 +70,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    border-radius: 7px;
 }
 
 li {
@@ -95,7 +101,7 @@ b {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 15px 10px;
 }
 
 #statistics h4 {
@@ -137,9 +143,94 @@ b {
 
 .all-specials {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0 0 0;
 }
 
 .specials {
+  text-align: center;
+  margin: 10px;
+  border-radius: 7px;
+  padding: 5px;
+  width: 190px;
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specials h4 {
+  margin: 0.4em 0;
+  height: 1em;
+  width: 100%;
+  padding: 0.2em;
+  /* word-wrap: break-word; */
+  overflow: hidden;
+}
+
+.comedian {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 7px;
+  padding: 25px;
+}
+
+#new-comic li {
+  float: none;
+  background-color: #DED6D6;
+  padding: 0.2em;
+}
+
+#new-comic input {
+  font-size: 28px;
+  width: 20em;
+  height: 1.2em;
+}
+
+#new-comic input[type="submit"] {
+  background-color: #999;
+  width: 10em;
+  height: 100px;
+}
+
+.new-comedian {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#insight {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+#insight a {
+  color: darkgrey;
+  padding: 14px 16px;
+}
+
+#insight a:hover {
+  background-color: #111;
+}
+
+#insight h4 {
+  padding: 5px;
+}
+
+#insight img {
+  height: 400px;
+  width: auto;
+  border: solid;
+  border-color: lightslategrey;
+  border-width: 4px;
+}
+
+.individual-special {
+  background-color: rgba(0, 0, 0, .08);
+  margin: 25px;
   padding: 20px;
+  border-radius: 8px;
 }

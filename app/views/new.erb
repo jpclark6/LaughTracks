@@ -1,7 +1,21 @@
-<form class="new-comic" action="/comedians" method=post>
-  <input type="text" name="comedian[first_name]" placeholder="First Name">
-  <input type="text" name="comedian[last_name]" placeholder="Last Name">
-  <input type="text" name="comedian[city]" placeholder="City">
-  <input type="text" name="comedian[age]" placeholder="Age">
-  <input type="submit" value="Submit">
-</form>
+<html>
+  <head>
+    <title>Add new comedian</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css" title="css" type="text/css" />
+    <link rel="stylesheet" href="../stylesheets/main.css" title="css" type="text/css" />
+  </head>
+  <body>
+    <div class="new-comedian">
+      <h1>Add new comedian:</h1>
+      <form id="new-comic" action="/comedians" method=post>
+        <ul>
+          <li><input type="text" name="comedian[first_name]" placeholder="First Name"></li>
+          <li><input type="text" name="comedian[last_name]" placeholder="Last Name"></li>
+          <li><input type="text" name="comedian[city]" placeholder="City"></li>
+          <li><input type="text" name="comedian[age]" placeholder="Age"></li>
+          <li><input type="submit" value="Submit"></li>
+        </ul>
+      </form>
+    </div>
+  </body>
+</html>
