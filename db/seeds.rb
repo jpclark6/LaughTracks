@@ -40,8 +40,8 @@ Special.create(title: "HBO Comedy Half Hour", length: (30 * 60), comedian_id: da
 Special.create(title: "Half Baked", length: (82 * 60), comedian_id: dave.id, pic_url: "images/chappelle_4.jpg")
 
 fred = Comedian.create(first_name: "Fred", last_name: "Armisen", age: "51", city: "Hattiesburg")
-Special.create(title: "Portlandia", length: (30 * 60), comedian_id: fred.id, pic_url: "images/fred_1")
-Special.create(title: "Documentary Now", length: (30 * 60), comedian_id: fred.id, pic_url: "images/fred_2")
+Special.create(title: "Portlandia", length: (30 * 60), comedian_id: fred.id, pic_url: "images/fred_1.jpg")
+Special.create(title: "Documentary Now", length: (30 * 60), comedian_id: fred.id, pic_url: "images/fred_2.jpg")
 
 russell = Comedian.create(first_name: "Russell", last_name: "Brand", age: 43, city: "Grays, Essex")
 Special.create(title: "Messiah Complex", length: (80 * 60), comedian_id: russell.id, pic_url: "images/russell_1.jpg")

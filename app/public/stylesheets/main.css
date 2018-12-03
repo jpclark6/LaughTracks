@@ -107,6 +107,7 @@ b {
 #statistics h4 {
   display: inline-block;
   vertical-align: middle;
+  padding: 10px;
 }
 
 .comedian {
@@ -233,4 +234,8 @@ b {
   margin: 25px;
   padding: 20px;
   border-radius: 8px;
+}
+
+.individual-special img {
+  max-width: 90%;
 }
