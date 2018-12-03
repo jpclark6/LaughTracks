@@ -27,10 +27,10 @@
     <div id="content">
       <div id="statistics">
         <h3><b>Statistics:</b></h3>
-        <h4><b>Average age: </b><%= @comedians.average_age(@comedians).round(2) \
+        <h4><b>Average age: </b><%= @comedians.average_age(@comedians).round \
           if @comedians.average_age(@comedians) %></h4>
         <h4><b>Average run length:</b>
-          <%= @ave_special_length.round(2) if @ave_special_length %> min.</h4>
+          <%= @ave_special_length.round if @ave_special_length %> min.</h4>
         <h4><b>Cities:</b>&nbsp;
           <% @all_cities.each do |city| %>
           <%= city %>&nbsp;
@@ -48,7 +48,7 @@
           <% comedian.specials.each do |special| %>
             <div class="specials">
               <h4><b><%= special.title %></b></h4>
-              <h4>Length <%= (special.length.to_f / 60).round(2) %> minutes</h4>
+              <h4>Length <%= (special.length.to_f / 60).round %> minutes</h4>
               <a href="<%= special.pic_url %>"><img src="<%= special.pic_url %>" alt="<%= special.title %>"></a>
             </div>
           <% end %>
