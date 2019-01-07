@@ -4,6 +4,11 @@ This was a solo learning project for week 7 of the Backend program at Turing. Th
 
 It can save and load data from the database, display the information using .erb files (embedded ruby with HTML), and also has testing for both the model and feature level.
 
+Here are some screenshots of the index and show pages.
+
+[[https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/index-page.png|alt=index-page]]
+[[https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/show-page.png|alt=show-page]]
+
 ## Setup
 
 If you would like to set up the app make sure you have the basic Ruby requirements, and then run the following terminal commands.
