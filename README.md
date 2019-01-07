@@ -6,8 +6,8 @@ It can save and load data from the database, display the information using .erb 
 
 Here are some screenshots of the index and show pages.
 
-[[https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/index-page.png|alt=index-page]]
-[[https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/show-page.png|alt=show-page]]
+![index](https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/index-page.png)
+![show](https://github.com/jpclark6/LaughTracks/blob/master/readme%20assets/show-page.png)
 
 ## Setup
 
