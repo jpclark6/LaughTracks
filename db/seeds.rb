@@ -65,7 +65,7 @@ Special.create(title: "Crashing", length: (30 * 60), comedian_id: john.id, pic_u
 sarah = Comedian.create(first_name: "Sarah", last_name: "Silverman", age: "47", city: "Bedford")
 Special.create(title: "Dying Laughing", length: (89 * 60), comedian_id: sarah.id, pic_url: "images/s1.jpg")
 Special.create(title: "Supermarket", length: (12 * 60), comedian_id: sarah.id, pic_url: "images/s2.jpg")
-Special.create(title: "We Are Miracles", length: (54 * 60), comedian_id: sarah.id, pic_url: "images/s2.jpg")
+Special.create(title: "We Are Miracles", length: (54 * 60), comedian_id: sarah.id, pic_url: "images/s3.jpg")
 
 
 

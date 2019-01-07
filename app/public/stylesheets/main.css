@@ -202,9 +202,10 @@ b {
 
 #insight {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* align-items: center; */
   margin: 0 0 20px 0;
 }
 
@@ -215,6 +216,10 @@ b {
 
 #insight a:hover {
   background-color: #111;
+}
+
+#insight h3 {
+  padding: 8px;
 }
 
 #insight h4 {
